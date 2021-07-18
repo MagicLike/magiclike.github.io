@@ -170,6 +170,35 @@
             <a href="javascript:history.back()">Go back to previous page</a>
             <noscript>Your browser does not support JavaScript or it is disabled.</noscript>
         </p>
+        <div class="dropdown">
+            <button onclick="LangDropdown()" class="dropbtn">English ▼</button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="./index.html" id="active">🇬🇧 English</a>
+                <a href="./de/index_de.html">🇩🇪 Deutsch</a>
+            </div>
+        </div>
+
+        <script>
+            function LangDropdown() {
+                document.getElementById("myDropdown").classList.toggle("show");
+            }
+
+            window.onclick = function (event) {
+                if (!event.target.matches('.dropbtn')) {
+                    var dropdowns = document.getElementsByClassName("dropdown-content");
+                    var i;
+                    for (i = 0; i < dropdowns.length; i++) {
+                        var openDropdown = dropdowns[i];
+                        if (openDropdown.classList.contains('show')) {
+                            openDropdown.classList.remove('show');
+                        }
+                    }
+                }
+            }
+        </script>
+
+        <br>
+
         <ul id="hashtags">
             <li>
                 〽️
@@ -188,7 +217,7 @@
             </li>
         </ul>
         <p id="copyright">© MagicLike 2021</p>
-        <p>This page is <a href="https://github.com/MagicLike/magiclike.github.io" target="_blank">OpenSource</a>!</p>
+        <p>This page is <a href="https://github.com/MagicLike/magiclike.github.io" target="_blank">Open Source</a>!</p>
         <br>
         <h4 class="credits">Credits</h4>
         <ul id="credits">
@@ -206,7 +235,7 @@
                 <strong>|</strong>
                 <li>
                     GitHub corner by
-                    <a href="https://github.com/eugena/github-animated-corners/" target="_blank">eugena</a>
+                    <a href="https://github.com/eugena/github-animated-corners/" target="_blank">@eugena</a>
                 </li>
             </div>
         </ul>
