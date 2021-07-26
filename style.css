@@ -20,6 +20,8 @@ h1 {
     left: 0;
     top: 0;
     width: 100%;
+    background-color: rgba(255, 255, 255, 0.25);
+    height: 75px;
 }
 
 #menu ul {
@@ -41,12 +43,28 @@ h1 {
     background-color: #333;
 }
 
+#home {
+    padding-top: 50px
+}
+
+#advices {
+    padding-top: 50px
+}
+
+#projects {
+    padding-top: 50px
+}
+
+#links {
+    padding-top: 50px
+}
+
 #profile-picture {
     position: absolute;
     top: 50px;
 }
 
-#flex {
+.flex {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -77,11 +95,12 @@ article {
     line-height: 200%;
 }
 
-#links {
+#links,
+#projects {
     line-height: 200%;
 }
 
-#seperation {
+.seperation {
     background-color: #2b2a2a;
 }
 
@@ -121,7 +140,8 @@ footer {
     display: block;
 }
 
-.dropdown a:hover, #active {
+.dropdown a:hover,
+#active {
     background-color: #333;
 }
 
@@ -158,11 +178,11 @@ footer {
     color: white;
 }
 
-.dropdown a:link{
+.dropdown a:link {
     color: white;
 }
 
-.dropdown a:visited{
+.dropdown a:visited {
     color: white;
 }
 
@@ -212,6 +232,7 @@ html::-webkit-scrollbar-thumb {
     box-shadow: 0 0 0 100vh black;
 }
 
+
 .github-corner:hover .octo-face {
     display: inline;
 }
@@ -250,4 +271,14 @@ html::-webkit-scrollbar-thumb {
     .github-corner .octo-arm {
         animation: octocat-wave 560ms ease-in-out;
     }
+}
+
+::-moz-selection {
+    background-color: #FFFF00;
+    color: #000000;
+}
+
+::selection {
+    background-color: #FFFF00;
+    color: #000000;
 }
