@@ -7,7 +7,7 @@ html {
 body {
     background-color: #000000;
     font-family: Inconsolata, monospace;
-    color: white;
+    color: rgb(200, 200, 200);
 }
 
 h1 {
@@ -22,41 +22,50 @@ h1 {
     width: 100%;
     background-color: rgba(255, 255, 255, 0.25);
     height: 75px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 #menu ul {
     white-space: nowrap;
-    overflow: auto;
-    float: right;
+    overflow: hidden;
     list-style: none;
+    margin-right: 10px;
 }
 
 #menu li {
-    display: inline-block;
+    display: block;
     color: white;
     text-decoration: none;
-    padding: 14px;
     background-color: #777;
+    border-radius: 10px;
+    float: right;
+    margin-right: 10px;
+}
+
+#menu a {
+    text-decoration: none;
+    display: block;
+    padding: 14px;
 }
 
 #menu li:hover {
     background-color: #333;
 }
 
-#home {
-    padding-top: 50px
+#home,
+#advices,
+#projects,
+#links,
+#donate {
+    padding-top: 60px;
 }
 
-#advices {
-    padding-top: 50px
-}
-
-#projects {
-    padding-top: 50px
-}
-
-#links {
-    padding-top: 50px
+#advices,
+#projects,
+#links,
+#donate {
+    padding-bottom: 60px;
 }
 
 #profile-picture {
@@ -72,6 +81,7 @@ h1 {
 
 #profile-picture img {
     margin: auto;
+    border-radius: 50px;
 }
 
 #picture-description {
@@ -100,12 +110,63 @@ article {
     line-height: 200%;
 }
 
+#links li {
+    list-style: none;
+}
+
+.gh-icon {
+    width: 16px;
+    margin-top: 5px;
+}
+
+.gl-icon {
+    width: 16px;
+}
+
+.itch-icon {
+    width: 16px;
+    margin-top: 5px;
+}
+
+#donate {
+    line-height: unset;
+}
+
+#donate ul {
+    list-style: none;
+}
+
+#donate-content {
+    display: flex;
+}
+
+#donate-button {
+    height: 59px;
+    margin-top: 3px;
+}
+
+#donate-qr-link {
+    margin-left: 10px;
+}
+
+.donate-qr {
+    border-radius: 10px;
+}
+
+#doge-qr{
+    height: 64px;
+    
+}
+
 .seperation {
     background-color: #2b2a2a;
+    border-radius: 10px;
 }
 
 footer {
     line-height: 75%;
+    padding-top: 100px;
+    padding-bottom: 50px;
 }
 
 .dropbtn {
@@ -136,38 +197,41 @@ footer {
 .dropdown-content a {
     color: black;
     padding: 12px 16px;
-    text-decoration: none;
     display: block;
 }
 
 .dropdown a:hover,
 #active {
     background-color: #333;
+    text-decoration: none;
 }
 
 .show {
     display: block;
 }
 
-#hashtags ul {
-    list-style: none;
-}
-
-#hashtags li {
-    display: inline;
-    float: right;
+#hashtags{
+    text-align: center;
 }
 
 .credits {
     text-align: center;
+    padding-top: 60px;
 }
 
-#credits ul {
-    list-style: none;
+#credits {
+    text-align: center;
+    font-size: 80%;
 }
 
-#credits li {
-    display: inline;
+#modifications {
+    text-align: center;
+    font-size: 80%;
+}
+
+#browser_compatibility {
+    text-align: center;
+    font-size: 80%;
 }
 
 #menu a:link {
@@ -187,7 +251,7 @@ footer {
 }
 
 a:link {
-    color: red;
+    color: rgb(255, 60, 60);
     background-color: transparent;
     text-decoration: none;
 }
@@ -199,19 +263,19 @@ a:link {
 }
 
 footer a:visited {
-    color: red;
+    color: rgb(255, 60, 60);
     background-color: transparent;
     text-decoration: none;
 }
 
 footer a:hover {
-    color: blue;
+    color: rgb(60, 60, 255);
     background-color: transparent;
     text-decoration: underline;
 }
 
 a:hover {
-    color: blue;
+    color: rgb(60, 60, 255);
     background-color: transparent;
     text-decoration: underline;
 }
@@ -231,7 +295,6 @@ html::-webkit-scrollbar-thumb {
     background: transparent;
     box-shadow: 0 0 0 100vh black;
 }
-
 
 .github-corner:hover .octo-face {
     display: inline;
@@ -281,4 +344,11 @@ html::-webkit-scrollbar-thumb {
 ::selection {
     background-color: #FFFF00;
     color: #000000;
+}
+
+.var-highlight {
+    color: #C0AD60;
+}
+.string-highlight {
+    color: rgba(253, 149, 90, 0.8);
 }
