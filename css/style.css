@@ -1,354 +1,106 @@
+@font-face {
+  font-family: "Nunito";
+  src: url("/fonts/Nunito/Nunito[wght].ttf");
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
 html {
-    scroll-behavior: smooth;
-    scrollbar-width: auto;
-    scrollbar-color: dark;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: #000000;
-    font-family: Inconsolata, monospace;
-    color: rgb(200, 200, 200);
+  background: #263238;
+  font-family: "Nunito", sans-serif;
 }
 
-h1 {
-    font-size: 60px;
-    text-decoration: underline;
+.container {
+  margin: auto auto;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-#menu {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.25);
-    height: 75px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+.tittle,
+.subtitle {
+  margin-bottom: 40px;
+  color: #44b9ff;
+  letter-spacing: 4px;
+  text-transform: uppercase;
 }
 
-#menu ul {
-    white-space: nowrap;
-    overflow: hidden;
-    list-style: none;
-    margin-right: 10px;
+.square-container {
+  list-style-type: none;
+  display: flex;
+  position: relative;
 }
 
-#menu li {
-    display: block;
-    color: white;
-    text-decoration: none;
-    background-color: #777;
-    border-radius: 10px;
-    float: right;
-    margin-right: 10px;
+.square {
+  margin: 4px;
+  width: 30px;
+  height: 30px;
+  border-radius: 7px;
+  animation: rotating 2.5s ease infinite;
 }
 
-#menu a {
-    text-decoration: none;
-    display: block;
-    padding: 14px;
+.square1 {
+  background: #736efe;
+  animation-delay: 0.2s;
 }
 
-#menu li:hover {
-    background-color: #333;
+.square2 {
+  background: #5999ff;
+  animation-delay: 0.4s;
 }
 
-#home,
-#advices,
-#projects,
-#links,
-#donate {
-    padding-top: 60px;
+.square3 {
+  background: #44b9ff;
+  animation-delay: 0.6s;
 }
 
-#advices,
-#projects,
-#links,
-#donate {
-    padding-bottom: 60px;
+.square4 {
+  background: #31d8ff;
+  animation-delay: 0.8s;
 }
 
-#profile-picture {
-    position: absolute;
-    top: 50px;
+.square5 {
+  background: #18ffff;
+  animation-delay: 1s;
 }
 
-.flex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+@keyframes rotating {
+  0% {
+    transform: rotate(0) scale(1);
+  }
 
-#profile-picture img {
-    margin: auto;
-    border-radius: 50px;
-}
+  50% {
+    transform: rotate(90deg) scale(0.6);
+  }
 
-#picture-description {
-    text-align: center;
-}
-
-header {
-    text-align: center;
-    line-height: 150%;
-    height: 300px;
-    margin-top: 100px;
-}
-
-.clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
-}
-
-article {
-    line-height: 200%;
-}
-
-#links,
-#projects {
-    line-height: 200%;
-}
-
-#links li {
-    list-style: none;
-}
-
-.gh-icon {
-    width: 16px;
-    margin-top: 5px;
-}
-
-.gl-icon {
-    width: 16px;
-}
-
-.itch-icon {
-    width: 16px;
-    margin-top: 5px;
-}
-
-#donate {
-    line-height: unset;
-}
-
-#donate ul {
-    list-style: none;
-}
-
-#donate-content {
-    display: flex;
-}
-
-#donate-button {
-    height: 59px;
-    margin-top: 3px;
-}
-
-#donate-qr-link {
-    margin-left: 10px;
-}
-
-.donate-qr {
-    border-radius: 10px;
-}
-
-#doge-qr{
-    height: 64px;
-    
-}
-
-.seperation {
-    background-color: #2b2a2a;
-    border-radius: 10px;
+  100% {
+    transform: rotate(90deg) scale(1);
+  }
 }
 
 footer {
-    line-height: 75%;
-    padding-top: 100px;
-    padding-bottom: 50px;
+  margin: auto auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  color: #31d8ff;
+  line-height: 170%;
 }
 
-.dropbtn {
-    background-color: transparent;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-}
-
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #777;
-    min-width: 160px;
-    overflow: auto;
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    color: white;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    display: block;
-}
-
-.dropdown a:hover,
-#active {
-    background-color: #333;
-    text-decoration: none;
-}
-
-.show {
-    display: block;
-}
-
-#hashtags{
-    text-align: center;
-}
-
-.credits {
-    text-align: center;
-    padding-top: 60px;
-}
-
-#credits {
-    text-align: center;
-    font-size: 80%;
-}
-
-#modifications {
-    text-align: center;
-    font-size: 80%;
-}
-
-#browser_compatibility {
-    text-align: center;
-    font-size: 80%;
-}
-
-#menu a:link {
-    color: white;
-}
-
-#menu a:visited {
-    color: white;
-}
-
-.dropdown a:link {
-    color: white;
-}
-
-.dropdown a:visited {
-    color: white;
-}
-
-a:link {
-    color: rgb(255, 60, 60);
-    background-color: transparent;
-    text-decoration: none;
-}
-
-#content a:visited {
-    color: green;
-    background-color: transparent;
-    text-decoration: none;
-}
-
-footer a:visited {
-    color: rgb(255, 60, 60);
-    background-color: transparent;
-    text-decoration: none;
-}
-
-footer a:hover {
-    color: rgb(60, 60, 255);
-    background-color: transparent;
-    text-decoration: underline;
-}
-
-a:hover {
-    color: rgb(60, 60, 255);
-    background-color: transparent;
-    text-decoration: underline;
-}
-
-html::-webkit-scrollbar-thumb {
-    border-radius: 25px;
-}
-html::-webkit-scrollbar {
-    width: 15px;
-}
-
-html::-webkit-scrollbar-track {
-    background: linear-gradient(0deg, rgba(255, 0, 0, 1) 0%, rgba(7, 0, 211, 1) 100%);
-}
-
-html::-webkit-scrollbar-thumb {
-    background: transparent;
-    box-shadow: 0 0 0 100vh black;
-}
-
-.github-corner:hover .octo-face {
-    display: inline;
-}
-
-.github-corner .octo-face {
-    display: none;
-}
-
-.github-corner:hover .octo-arm {
-    animation: octocat-wave 560ms ease-in-out;
-}
-
-@keyframes octocat-wave {
-
-    0,
-    100% {
-        transform: rotate(0deg);
-    }
-
-    20%,
-    60% {
-        transform: rotate(-25deg);
-    }
-
-    40%,
-    80% {
-        transform: rotate(10deg);
-    }
-}
-
-@media(max-width: 500px) {
-    .github-corner:hover .octo-arm {
-        animation: none;
-    }
-
-    .github-corner .octo-arm {
-        animation: octocat-wave 560ms ease-in-out;
-    }
-}
-
-::-moz-selection {
-    background-color: #FFFF00;
-    color: #000000;
-}
-
-::selection {
-    background-color: #FFFF00;
-    color: #000000;
-}
-
-.var-highlight {
-    color: #C0AD60;
-}
-.string-highlight {
-    color: rgba(253, 149, 90, 0.8);
+footer a {
+  color: #736efe
 }
